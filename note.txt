@@ -1,0 +1,6 @@
+In object detection, there are a few methods to do it:
+1. sliding window object detection
+2. R CNN
+3. Fast R CNN
+4. Faster R CNN
+5. YOLO
