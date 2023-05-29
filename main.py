@@ -1,8 +1,27 @@
 import cv2
+import os
 import numpy as np
 from matplotlib import pyplot as plt
 from PIL import Image
 
+#opencv's video capture is boring...uh
+
+folder_path = 'data'  # Update with the path to your folder
+
+for filename in os.listdir(folder_path):
+    if filename.endswith('.jpg') or filename.endswith('.png'):
+        image_path = os.path.join(folder_path, filename)
+        image = cv2.imread(image_path)
+        if image is not None:
+            # Process the image (e.g., display, save, etc.)
+            cv2.imshow('Image', image)
+            cv2.waitKey(0)
+        else:
+            print(f'Error reading image: {filename}')
+
+
+
+"""
 img = cv2.imread("image.001.jpg")
 
 channels = cv2.split(img)
@@ -13,6 +32,7 @@ cv2.imshow("ee", channels[1])
 cv2.waitKey()
 cv2.imshow("eee", channels[2])
 cv2.waitKey()
+"""
 
 """
 x = Image.open("image.001.jpg")

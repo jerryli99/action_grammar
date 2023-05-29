@@ -4,3 +4,24 @@ In object detection, there are a few methods to do it:
 3. Fast R CNN
 4. Faster R CNN
 5. YOLO
+
+say you have an image that contains a dog.
+You ask: is this a dog or a person? 
+
+Image classification->
+Neural network output Dog=1, person=0.
+
+Object Localization->
+where exactly is the dog in this image? 
+neural network output Dog=1, person=0 + Bounding box
+how do we do that?
+we have a vector that can look like this
+[
+    P_c -> probability dog or person? [0, 1]
+    B_x -> bounding box's center x coordinate point
+    B_y -> bounding box's center y coordinate point
+    B_w -> bounding box's width
+    B_h -> bounding box's height
+    C_1 -> Dog class 1 or 0
+    C_2 -> Person class 1 or 0
+]
