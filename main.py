@@ -102,7 +102,7 @@ for filename in os.listdir(folder_path):
 
 #end for
 
-
+'''
 # Create a GIF writer object
 gif_writer = imageio.get_writer("segmented_images.gif", mode="I", duration=0.5, loop=0)
 
@@ -116,3 +116,4 @@ for segmented_image in output_gif:
 
 # Close the GIF writer
 gif_writer.close()
+'''
